@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Do you wanna go out with me [name]?</h1>
+        </div>
+        <div class="img">
+            <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="cute animated illustration"/>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yes-button" onclick="nextPage()">Yes</button>
+            <button class="btn" id="no-button" onmouseover="moveButton()">No</button>
+            
+        </div>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "../yes-page/index.html"
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
