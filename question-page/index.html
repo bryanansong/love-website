@@ -9,28 +9,27 @@
 <body>
     <div class="container">
         <div class="heading">
-            <h1>Do you wanna go out with me [name]?</h1>
+            <h1>Do you wanna hit legs<br>with me?<br>🏋🏾‍♂️🏋🏾‍♀️</h1>
         </div>
         <div class="img">
-            <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="cute animated illustration"/>
+            <img id="gif" src="https://media.giphy.com/media/xT3i1gnm8BTXgtH6py/giphy.gif" alt="cute animated illustration"/>
         </div>
-        <div class="buttons">
-            <button class="btn" id="yes-button" onclick="nextPage()">Yes</button>
-            <button class="btn" id="no-button" onmouseover="moveButton()">No</button>
-            
+        <div class = "buttons">
+            <button class="btn" id = "yes-button" onclick="nextPage()">Yes</button>
+            <button class="btn" id="no-button" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <script>
+                function nextPage() {
+                    window.location.href = "../yes-page/index.html";
+                }
+                
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('no-button').offsetWidth);
+                    var y = Math.random() * (window.innerHeight - document.getElementById('no-button').offsetHeight);
+                    document.getElementById('no-button').style.left = `${x}px`;
+                    document.getElementById('no-button').style.top = `${y}px`;
+                }
+            </script> 
         </div>
     </div>
-    <script>
-        function nextPage() {
-            window.location.href = "../yes-page/index.html"
-        }
-
-        function moveButton() {
-            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-            document.getElementById('no-button').style.left = `${x}px`;
-            document.getElementById('no-button').style.top = `${y}px`;
-        }
-    </script>
 </body>
 </html>
